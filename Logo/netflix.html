@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: black;
+        }
+        .netflix
+        {
+            width: 150px;
+            height: 250px;
+            position:absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .netflix span
+        {
+            height: 100%;
+            width:50px;
+            background-color: red;
+            position: absolute;
+        }
+        .left
+        {
+            left:0;
+            bottom:0;
+        }
+        .mid
+        {
+            top:0;
+            left: 0;
+            transform: skewX(22deg);
+            transform-origin: top left;
+            box-shadow: 0 0 50px black;
+            z-index: 2;
+        }
+        .right
+        {
+            right:0;
+            bottom: 0;
+        }
+        .netflix::after
+        {
+            content: '';
+            width: 120%;
+            height:20px;
+            border-radius: 50%;
+           background: rgb(0, 0, 0); 
+           position: absolute;
+           left:-10%;
+           bottom: -6%;
+           z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="netflix">
+        <span class="left"></span>
+        <span class="mid"></span>
+        <span class="right"></span>
+    </div>
+</body>
+</html>
